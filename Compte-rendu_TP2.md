@@ -48,11 +48,11 @@ Ces commandes ci-dessus, permettent de passer la variable en variable d'environn
 
 **Question 7 :** Créer la variable d’environnement NOMS ayant pour contenu vos noms de binômes séparés par un espace. Afficher la valeur de NOMS pour vérifier que l’affectation est correcte. <br/>
 
-Nous avons donc ci-dessous, créé la variable d'environnement NOM:
+Nous avons donc ci-dessous, créé la variable d'environnement NOM: <br/>
 
-$ export NOMS="Julien Clément Benjamin"
-$ printenv | grep NOMS
-NOMS=Julien Clément Benjamin
+$ export NOMS="Julien Clément Benjamin" <br/>
+$ printenv | grep NOMS <br/>
+NOMS=Julien Clément Benjamin <br/>
 
 **Question 8 :** Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS. <br/>
 
@@ -78,8 +78,8 @@ Ajoutez le chemin vers script à votre PATH de manière permanente
 
 Voilà le résultat de la partie programmation :
 
-julien@ubuntu:~/scripts$ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/julien/scripts
-julien@ubuntu:~/scripts$ printenv | grep PATH
+$ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/julien/scripts <br/>
+$ printenv | grep PATH <br/>
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/julien/scripts
 
 
