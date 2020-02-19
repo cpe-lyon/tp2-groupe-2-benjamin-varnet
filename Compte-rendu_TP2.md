@@ -127,13 +127,13 @@ Il affichera un message d’erreur dans le cas contraire.
 Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation : nom_du_script nom_utilisateur”, où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)
 
 Le script est le suivant : 
->#!/bin/bash
+>!/bin/bash
 >##############################################################################
-># Script name   : test-user.sh                                               #
-># Version	: 1.0                                                            #
-># Date          : Fev.2020                                                   #
-># Synopsys      : TP2                                                        #
-># Who           : Julien                                                     #
+> Script name   : test-user.sh                                               #
+> Version	: 1.0                                                            #
+> Date          : Fev.2020                                                   #
+> Synopsys      : TP2                                                        #
+> Who           : Julien                                                     #
 >##############################################################################
 
 >_NOM_SCRIPT="$0"
