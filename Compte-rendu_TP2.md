@@ -91,7 +91,7 @@ Le script que nous avons réalisé est le suivant :
 
 >#!/bin/bash
 >#######################
->#   Authors : Julien  #
+>##Authors : Julien  ##
 >#######################
 >
 >read -s -p "Saissisez votre mots de passe :" password_readen
