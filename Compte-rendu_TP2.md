@@ -50,8 +50,8 @@ Ces commandes ci-dessus, permettent de passer la variable en variable d'environn
 
 Nous avons donc ci-dessous, créé la variable d'environnement NOM:
 
-julien@ubuntu:~$ export NOMS="Julien Clément Benjamin"
-julien@ubuntu:~$ printenv | grep NOMS
+$ export NOMS="Julien Clément Benjamin"
+$ printenv | grep NOMS
 NOMS=Julien Clément Benjamin
 
 **Question 8 :** Ecrivez une commande qui affiche ”Bonjour à vous deux, binôme1 binôme2 !” (où binôme1 et binôme2 sont vos deux noms) en utilisant la variable NOMS. <br/>
