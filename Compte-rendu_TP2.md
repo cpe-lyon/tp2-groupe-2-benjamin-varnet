@@ -155,3 +155,33 @@ Le compte julien existe dans le système <br/>
 $ test-user.sh benji<br/>
 Le compte benji n'existe pas dans le système <br/>
 
+## Exercice 6. Le juste prix 
+
+Écrivez un script qui génère un nombre aléatoire entre 1 et 1000 et demande à l’utilisateur de le deviner. Le programme écrira ”C’est plus !”, ”C’est moins !” ou ”Gagné !” selon les cas (vous utiliserez $RANDOM). <br/>
+
+Voici le script que nous avons réalisé :
+
+>#!/bin/bash
+>############################################################################## <br/>
+> Script name   : juste-prix.sh                                               # <br/>
+> Version       : 1.0                                                            # <br/>
+> Date          : Fev.2020                                                   #<br/>
+> Synopsys      : TP2                                                        #<br/>
+> Who           : Julien                                                     #<br/>
+>##############################################################################<br/>
+
+>nombre=$RANDOM <br/>
+>declare -i nombreuser=0 <br/>
+
+>while ! [ $nombreuser -eq $nombre ] <br/>
+>do <br/>
+>        read -p "Saissisez votre nombre : " nombreuser <br/>
+>        if [[ $nombreuser -gt $nombre ]]; then <br/>
+>                echo -e " \n C’est moins ! " <br/>
+>        fi
+>        if [[ $nombreuser -lt $nombre ]]; then <br/>
+>                echo -e " \n C’est plus ! " <br/>
+>        fi <br/>
+>done <br/>
+
+
