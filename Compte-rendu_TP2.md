@@ -151,8 +151,8 @@ Le script est le suivant :
 
 Le résultat du script est le suivant :
 
-julien@ubuntu:~/scripts$ test-user.sh julien <br/>
+$ test-user.sh julien <br/>
 Le compte julien existe dans le système <br/>
-julien@ubuntu:~/scripts$ test-user.sh benji<br/>
+$ test-user.sh benji<br/>
 Le compte benji n'existe pas dans le système <br/>
 
