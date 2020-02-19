@@ -89,20 +89,20 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 Le script que nous avons réalisé est le suivant : 
 
->#!/bin/bash
->#######################
->##Authors : Julien  ##
->#######################
+>#!/bin/bash <br/>
+>####################### <br/>
+>##Authors : Julien  ## <br/>
+>####################### <br/>
 >
->read -s -p "Saissisez votre mots de passe :" password_readen
->password="benji"
->if [[ $password_readen == $password ]]; then
->    echo -e "\n Vous avez entré(e) le bon mot de passe"
->else
->    echo -e " \n Vous avez entré(e) le mauvais mot de passe"
->    exit 1
->fi
->exit
+>read -s -p "Saissisez votre mots de passe :" password_readen <br/>
+>password="benji" <br/>
+>if [[ $password_readen == $password ]]; then <br/>
+>    echo -e "\n Vous avez entré(e) le bon mot de passe" <br/>
+>else <br/>
+>    echo -e " \n Vous avez entré(e) le mauvais mot de passe" <br/>
+>    exit 1 <br/>
+>fi <br/>
+>exit <br/>
 
 
 
@@ -120,4 +120,39 @@ return 0
 fi
 }
 Il affichera un message d’erreur dans le cas contraire.
+
+
+## Exercice 4. Contrôle d’utilisateur
+
+Écrivez un script qui vérifie l’existence d’un utilisateur dont le nom est donné en paramètre du script. Si le script est appelé sans nom d’utilisateur, il affiche le message : ”Utilisation : nom_du_script nom_utilisateur”, où nom_du_script est le nom de votre script récupéré automatiquement (si vous changez le nom de votre script, le message doit changer automatiquement)
+
+Le script est le suivant : 
+>#!/bin/bash
+>##############################################################################
+># Script name   : test-user.sh                                               #
+># Version	: 1.0                                                            #
+># Date          : Fev.2020                                                   #
+># Synopsys      : TP2                                                        #
+># Who           : Julien                                                     #
+>##############################################################################
+
+>_NOM_SCRIPT="$0"
+>_USER_SEARCH="$1"
+
+>res=$(cut -d: -f1 /etc/passwd | grep "$_USER_SEARCH")
+>if [[ $res == $_USER_SEARCH ]] ; then
+>	echo -e "Le compte $_USER_SEARCH existe dans le système"
+>	exit 0
+>else
+>	echo -e "Le compte $_USER_SEARCH n'existe pas dans le système"
+>	exit 1
+>fi
+
+
+Le résultat du script est le suivant :
+
+julien@ubuntu:~/scripts$ test-user.sh julien
+Le compte julien existe dans le système
+julien@ubuntu:~/scripts$ test-user.sh benji
+Le compte benji n'existe pas dans le système
 
